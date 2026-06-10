@@ -1,0 +1,262 @@
+/* DESIGN ARQUITETÔNICO DO FOOTER - CORRIGIDO E PREMIUM */
+
+.footer-container {
+  background-color: #0f172a; /* Azul Marinho Escuro Intenso */
+  color: #94a3b8;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Linha de Gradiente Exclusiva e Fina no Topo */
+.footer-top-line {
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(to right, #1e40af, #f59e0b, #3b82f6);
+}
+
+.footer-content {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 80px 24px 40px 24px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.3fr;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+/* COLUNA 1: IDENTIDADE DA MARCA CORRIGIDA */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.brand-logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-icon-box {
+  background-color: #1e40af; /* Azul Real */
+  color: #ffffff;
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(30, 64, 175, 0.25);
+  flex-shrink: 0;
+}
+
+.brand-text-block {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Correção de tamanho proporcional para o Footer */
+.brand-name {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+}
+
+.brand-subname {
+  font-size: 0.9rem;
+  color: #3b82f6;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+/* Encapsulamento correto para manter o recuo alinhado com o texto superior */
+.brand-details-block {
+  padding-left: 60px; 
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.brand-tagline {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+  color: #cbd5e1;
+}
+
+.brand-motto {
+  font-size: 0.85rem;
+  color: #f59e0b; /* Destaque Ouro heráldico */
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+/* TÍTULOS DE COLUNA MODERNOS */
+.column-title {
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 24px;
+  position: relative;
+  padding-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.column-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #1e40af;
+}
+
+/* COLUNA 2: LINKS INTERNOS COESOS */
+.links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-link-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.link-arrow {
+  color: #1e40af;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+/* Efeito Hover Dinâmico e sutil */
+.footer-link-item:hover {
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.footer-link-item:hover .link-arrow {
+  color: #3b82f6;
+  transform: translateX(2px);
+}
+
+/* COLUNA 3: CONTATOS INSTITUCIONAIS */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #cbd5e1;
+}
+
+.contact-icon {
+  color: #3b82f6;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.footer-contact-link {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-contact-link:hover {
+  color: #ffffff;
+}
+
+.web-span {
+  color: #60a5fa;
+  font-weight: 600;
+}
+
+/* BARRA INFERIOR / COPYRIGHT */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 30px;
+  margin-top: 20px;
+}
+
+.bottom-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-bottom p {
+  font-size: 0.85rem;
+  margin: 0;
+  color: #64748b;
+}
+
+.location-tag {
+  font-weight: 700;
+  color: #475569 !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.75rem !important;
+}
+
+/* QUEBRAS DE RESPONSIVIDADE ADAPTATIVAS */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 44px;
+  }
+  .footer-brand {
+    grid-column: span 2;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .footer-brand {
+    grid-column: span 1;
+  }
+  .brand-details-block {
+    padding-left: 0; /* Remove o recuo no mobile para ganhar espaço */
+  }
+  .bottom-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  .footer-content {
+    padding: 60px 20px 30px 20px;
+  }
+}

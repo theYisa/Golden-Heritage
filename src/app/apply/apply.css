@@ -1,0 +1,293 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+/* DEFINIÇÃO DE CORES DA MATRIZ CORPORATIVA DE MODEL SCHOOL */
+:root {
+  --ims-royal-blue: #1e40af;
+  --ims-dark-navy: #0f172a;
+  --ims-border-color: #e2e8f0;
+  --ims-light-bg: #f8fafc;
+  --ims-gold-accent: #f59e0b;
+}
+
+.inscricao-page {
+  background: #f1f5f9;
+  color: #334155;
+}
+
+/* HEADER DA PÁGINA */
+.inscricao-header {
+  background: linear-gradient(135deg, var(--ims-dark-navy) 0%, #1e3a8a 100%);
+  color: #ffffff;
+  padding: 90px 10%;
+  text-align: center;
+}
+
+.apply-badge {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #93c5fd;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 1px solid rgba(147, 197, 253, 0.2);
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.inscricao-header h1 {
+  font-size: 3rem;
+  font-weight: 850;
+  margin: 0 0 10px 0;
+  letter-spacing: -0.02em;
+}
+
+.inscricao-header p {
+  font-size: 1.15rem;
+  opacity: 0.85;
+  margin: 0;
+  font-weight: 300;
+}
+
+.divider {
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(to right, var(--ims-royal-blue), var(--ims-gold-accent));
+}
+
+/* CONTAINER DO FORMULÁRIO */
+.form-container-viva {
+  max-width: 950px;
+  margin: -40px auto 40px auto;
+  position: relative;
+  z-index: 20;
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 24px;
+  border: 1px solid var(--ims-border-color);
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.08);
+}
+
+.form-section {
+  margin-bottom: 45px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--ims-border-color);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ims-dark-navy);
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 1.35rem;
+  font-weight: 700;
+  border-left: 4px solid var(--ims-royal-blue);
+  padding-left: 15px;
+}
+
+/* SISTEMA DE GRID INTEGRADO */
+.grid-inputs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  column-gap: 30px;
+  row-gap: 24px;
+}
+
+/* UPLOADER DE FOTO EXCLUSIVO */
+.foto-uploader {
+  grid-row: span 3;
+  height: 200px;
+  max-width: 200px;
+  border: 2px dashed #cbd5e1;
+  background-color: var(--ims-light-bg);
+  border-radius: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  padding: 0 !important;
+}
+
+.foto-uploader:hover {
+  border-color: var(--ims-royal-blue);
+  background-color: #eff6ff;
+}
+
+.upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #64748b;
+  padding: 20px;
+}
+
+.upload-placeholder p {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.fotoAtual {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* INPUTS VIVA REESTILIZADOS */
+.input-viva {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  background-color: #ffffff;
+  color: var(--ims-dark-navy);
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.input-viva:focus {
+  border-color: var(--ims-royal-blue);
+  box-shadow: 0 0 0 4px rgba(30, 64, 175, 0.1);
+}
+
+.select-track {
+  border: 2px solid #cbd5e1;
+  font-weight: 600;
+  color: var(--ims-royal-blue);
+}
+
+/* ENCARREGADO BLOCK */
+.encarregado-alerta {
+  background-color: #fffdf5;
+  padding: 35px 30px;
+  border-radius: 16px;
+  border: 1px dashed var(--ims-gold-accent);
+}
+
+.encarregado-alerta .section-title {
+  border-left-color: var(--ims-gold-accent);
+}
+
+/* GERADOR DE ID MATRICULA */
+.gerar-container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 8px;
+}
+
+.gerar-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: var(--ims-royal-blue);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  user-select: none;
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.15);
+}
+
+.gerar-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.gerar-btn:active {
+  transform: scale(0.96);
+}
+
+.btn-desativado {
+  background-color: #10b981 !important; /* Verde Sucesso */
+  box-shadow: none !important;
+  pointer-events: none;
+}
+
+.readOnlyInput {
+  background-color: var(--ims-light-bg);
+  font-family: monospace;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--ims-royal-blue);
+}
+
+/* BOTÃO OFICIAL DE SUBMISSÃO */
+.btn-enviar-inscricao {
+  width: 100%;
+  padding: 18px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.2s ease;
+}
+
+.bloqueado {
+  background-color: #cbd5e1;
+  color: #94a3b8;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.gerado {
+  background-color: var(--ims-dark-navy);
+  color: #ffffff;
+  cursor: pointer;
+  pointer-events: all;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
+}
+
+.gerado:hover {
+  background-color: var(--ims-royal-blue);
+  transform: translateY(-2px);
+}
+
+/* EMBEDDED FOOTER EXTRA */
+.embeddedFooter {
+  background-color: var(--ims-dark-navy);
+  color: #64748b;
+  padding: 24px;
+  text-align: center;
+  margin-top: 40px;
+}
+.embeddedFooter p { margin: 0; font-size: 0.85rem; }
+
+/* MEDIA QUERIES PARA RESPONSIVIDADE COMPLETA */
+@media (max-width: 768px) {
+  .form-container-viva {
+    margin: 20px 16px;
+    padding: 30px 20px;
+  }
+  .inscricao-header h1 {
+    font-size: 2.2rem;
+  }
+  .foto-uploader {
+    grid-row: auto;
+    max-width: 100%;
+    height: 160px;
+  }
+  .gerar-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .gerar-btn {
+    padding: 14px;
+  }
+}

@@ -1,0 +1,482 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.aboutPageContainer {
+  color: #334155;
+  background-color: #ffffff;
+}
+aboutHero
+.centralMax {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.sectionWrapper {
+  padding: 90px 24px;
+}
+
+.defaultBg { background-color: #ffffff; }
+.lightGreyBg { background-color: #f8fafc; }
+.dataHubBg { background-color: #ffffff; border-bottom: 1px solid #f1f5f9; }
+
+.sectionHeading {
+  margin-bottom: 50px;
+}
+.textCenter { text-align: center; }
+
+.customLine {
+  width: 60px;
+  height: 4px;
+  background-color: #1e40af;
+  margin: 16px auto;
+  border-radius: 2px;
+}
+
+.sectionHeading p {
+  color: #64748b;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* 1. HERO COM A GRANDE CASA */
+.aboutHero {
+  position: relative;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.heroImageOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.heroGrandeCasa {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.darkBlendedFilter {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(6, 15, 37, 0.95) 30%, rgba(30, 58, 138, 0.85) 100%);
+}
+
+.heroTextContent {
+  position: relative;
+  z-index: 5;
+  padding: 0 24px;
+}
+
+.heroMiniBadge {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #93c5fd;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 1px solid rgba(147, 197, 253, 0.2);
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.aboutHero h1 {
+  font-size: 3.5rem;
+  font-weight: 850;
+  margin: 0 0 20px 0;
+  letter-spacing: -0.03em;
+}
+
+/* Alvo da escola limitado estritamente a 4 linhas */
+.fourLineTarget {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  max-width: 850px;
+  margin: 0;
+  opacity: 0.95;
+  font-weight: 400;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ==========================================================================
+   2. DATA HUB (FOCADO EM ESTABILIDADE E RESPONSIVIDADE)
+   ========================================================================== */
+
+/* Container da seção */
+.sectionWrapper.dataHubBg { 
+  background-color: #ffffff; 
+  border-bottom: 1px solid #f1f5f9;
+  position: relative;
+  z-index: 10;
+  padding: 90px 24px;
+}
+
+/* Grid que organiza as duas colunas */
+.dataGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  /* Reduzido para um valor seguro que cria o charme flutuante sem engolir o texto superior */
+  margin-top: -50px; 
+  position: relative;
+}
+
+/* Os cartões brancos internos */
+.dataCard {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06);
+  border: 1px solid #e2e8f0;
+}
+
+.dataCard h3 {
+  font-size: 1.4rem;
+  color: #0f172a;
+  margin: 0 0 12px 0;
+}
+
+.cardLine {
+  width: 40px;
+  height: 3px;
+  background-color: #1e40af;
+  margin-bottom: 30px;
+  border-radius: 2px;
+}
+
+/* Lista de Contatos Oficiais */
+.corporateDetailsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.corporateDetailsList li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.detIcon {
+  color: #1e40af;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.corporateDetailsList strong {
+  display: block;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.corporateDetailsList span {
+  font-size: 1rem;
+  color: #334155;
+  font-weight: 500;
+  word-break: break-word; /* Evita que links longos quebrem o layout do card */
+}
+
+/* Grid de Mini Métricas (Lado Direito) */
+.metricsGridMinimal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.metricBox {
+  background-color: #f8fafc;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #f1f5f9;
+}
+
+.mIcon {
+  color: #1e40af;
+  margin-bottom: 12px;
+}
+
+.metricBox h4 {
+  font-size: 1rem;
+  color: #0f172a;
+  margin: 0 0 6px 0;
+}
+
+.metricBox p {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   REGRAS DE MEDIA QUERY EXCLUSIVAS PARA O DATA HUB (ANTI-QUEBRA)
+   ========================================================================== */
+
+@media (max-width: 1100px) {
+  .dataGrid { 
+    grid-template-columns: 1fr; /* Transforma em uma única coluna */
+    margin-top: 20px;           /* Remove a margem negativa para não sobrepor o texto no tablet */
+    gap: 30px;
+  }
+}
+
+@media (max-width: 650px) {
+  .metricsGridMinimal { 
+    grid-template-columns: 1fr; /* Transforma as mini métricas em lista vertical no celular */
+  }
+  .dataCard {
+    padding: 24px; /* Reduz o espaçamento interno para telas pequenas */
+  }
+  .sectionWrapper.dataHubBg {
+    padding: 40px 16px;
+  }
+}
+
+/* 3. SUB-SESSÕES DO ÁLBUM DE MEMÓRIAS */
+.albumTabsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.tabBtn {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+}
+
+.tabBtn:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+.tabBtnActive {
+  background-color: #1e40af;
+  color: #ffffff;
+  border-color: #1e40af;
+  box-shadow: 0 8px 20px rgba(30, 64, 175, 0.2);
+}
+
+.albumGridDisplay {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.photoAlbumCard {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+  transition: transform 0.2s;
+}
+
+.photoAlbumCard:hover {
+  transform: translateY(-4px);
+}
+
+.albumImgWrapper {
+  position: relative;
+  height: 200px;
+}
+
+.albumImgWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.albumYearTag {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: #0f172a;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+
+.albumCardText {
+  padding: 20px;
+}
+
+.albumCardText h4 {
+  font-size: 1.1rem;
+  color: #0f172a;
+  margin: 0 0 8px 0;
+}
+
+.albumCardText p {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* 4. OUR SPORTS INFRASTRUCTURE */
+.sportsGridSystem {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.sportsCardItem {
+  background-color: #ffffff;
+  border: 1px solid #f1f5f9;
+  padding: 35px 24px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.02);
+  border-bottom: 4px solid #e2e8f0;
+  transition: border-color 0.2s;
+}
+
+.sportsCardItem:hover {
+  border-bottom-color: #1e40af;
+}
+
+.sportsIconCircle {
+  width: 56px;
+  height: 56px;
+  background-color: #eff6ff;
+  color: #1e40af;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+}
+
+.sportsCardItem h3 {
+  font-size: 1.2rem;
+  color: #0f172a;
+  margin: 0 0 12px 0;
+}
+
+.sportsCardItem p {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 5. TEACHERS PROFILE SYTEM */
+.teachersGridSystem {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.teacherProfileCard {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.01);
+}
+
+.teacherImageSpace {
+  height: 260px;
+  background-color: #f1f5f9;
+}
+
+.teacherImageSpace img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.teacherMetaDetails {
+  padding: 24px;
+}
+
+.teacherMetaDetails h4 {
+  font-size: 1.2rem;
+  color: #0f172a;
+  margin: 0 0 6px 0;
+}
+
+.teacherRoleBadge {
+  display: inline-block;
+  font-size: 0.75rem;
+  background-color: #eff6ff;
+  color: #1e40af;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.teacherMetaDetails p {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* FOOTER */
+.embeddedFooter {
+  background-color: #0f172a;
+  color: #64748b;
+  padding: 30px 24px;
+  text-align: center;
+  border-top: 1px solid #1e293b;
+}
+
+.embeddedFooter p {
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* RESPONSIVIDADE COMPLETA */
+@media (max-width: 1100px) {
+  .albumGridDisplay { grid-template-columns: repeat(2, 1fr); }
+  .sportsGridSystem { grid-template-columns: repeat(2, 1fr); }
+  .teachersGridSystem { grid-template-columns: repeat(2, 1fr); }
+  .dataGrid { grid-template-columns: 1fr; margin-top: 20px; }
+  .aboutHero h1 { font-size: 2.5rem; }
+}
+
+@media (max-width: 650px) {
+  .albumGridDisplay { grid-template-columns: 1fr; }
+  .sportsGridSystem { grid-template-columns: 1fr; }
+  .teachersGridSystem { grid-template-columns: 1fr; }
+  .metricsGridMinimal { grid-template-columns: 1fr; }
+  .aboutHero { height: auto; padding: 100px 24px 60px 24px; }
+  .heroImageOverlay { display: none; }
+  .aboutHero { background: #0f172a; }
+  .fourLineTarget { -webkit-line-clamp: unset; overflow: visible; }
+}

@@ -1,0 +1,202 @@
+/* DESIGN DE MATRIZ PREMIUM - INTERNATIONAL MODEL SCHOOL */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+}
+
+/* 1. EFEITO DE ÁGUA TRASLÚCIDO (INICIAL) */
+.headerWater {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(30, 64, 175, 0.05) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  padding: 20px 0;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 4px 30px rgba(0, 0, 0, 0.03);
+}
+
+/* 3. ESTADO SÓLIDO DURO (APÓS SCROLL DE CERTA ALTURA) */
+.headerSolid {
+  background-color: #0f172a; /* Azul Marinho Duro e Corporativo */
+  border-bottom: 2px solid #1e40af; /* Linha sutil em Azul Real */
+  padding: 12px 0;
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.3);
+}
+
+.headerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO DECORATION */
+.logoArea {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(255,255,255,0.1));
+}
+
+.logoTextWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoTitle {
+  font-size: 1.15rem;
+  font-weight: 850;
+  color: #ffffff;
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+
+.logoSubtitle {
+  font-size: 0.75rem;
+  color: #93c5fd; /* Azul claro para realce */
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+/* LINKS DE NAVEGAÇÃO */
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  position: relative;
+  padding: 6px 0;
+}
+
+.navigation a:hover, .navigation .activeLink {
+  color: #ffffff;
+}
+
+/* Linha decorativa flutuante embaixo do link ativo */
+.navigation a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #db8a21a0;
+  transition: width 0.25s ease;
+}
+
+.navigation a:hover::after, .navigation .activeLink::after {
+  width: 100%;
+}
+
+.btnApplyMobile {
+  display: none !important;
+}
+
+/* BOTÃO APPLY NOW */
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btnApply {
+  text-decoration: none;
+  background-color: #db8a21; /* Azul Real */
+  color: #ffffff;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 14px rgba(30, 64, 175, 0.4);
+  transition: all 0.2s ease;
+}
+
+.btnApply:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(30, 64, 175, 0.5);
+}
+
+.mobileMenuBtn {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* 2. RESPONSIVIDADE E ADAPTAÇÃO PARA TELA PEQUENA */
+@media (max-width: 968px) {
+  .navigation {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background-color: #0f172a; /* Fundo sólido para segurança no mobile */
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px 40px;
+    gap: 24px;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .navActive {
+    right: 0;
+  }
+
+  .navigation a {
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .navigation a::after {
+    display: none; /* Remove linha no mobile */
+  }
+
+  .btnApply {
+    display: none; /* Esconde o botão padrão */
+  }
+
+  .btnApplyMobile {
+    display: block !important;
+    background-color: #1e40af;
+    color: white !important;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: 700;
+  }
+
+  .mobileMenuBtn {
+    display: block; /* Mostra o menu hambúrguer */
+    z-index: 2;
+  }
+}

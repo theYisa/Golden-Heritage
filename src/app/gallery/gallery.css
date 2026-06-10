@@ -1,0 +1,534 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.galeriaPageContainer {
+  color: #334155;
+  background-color: #ffffff;
+}
+
+/* CARACTERÍSTICAS GERAIS */
+.centralMax {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.sectionWrapper {
+  padding: 90px 24px;
+}
+
+.defaultBg { background-color: #ffffff; }
+.lightGreyBg { background-color: #f8fafc; }
+
+.sectionHeading {
+  margin-bottom: 60px;
+}
+
+.textCenter { text-align: center; }
+
+.customLine {
+  width: 65px;
+  height: 4px;
+  background-color: #1e40af;
+  margin: 16px auto;
+  border-radius: 2px;
+}
+
+.leftLine {
+  width: 50px;
+  height: 4px;
+  background-color: #1e40af;
+  margin: 16px 0 24px 0;
+  border-radius: 2px;
+}
+
+.sectionHeading p {
+  color: #64748b;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* HERO SECTION */
+.galeriaHero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+  color: #ffffff;
+  padding: 140px 24px 90px 24px;
+  text-align: center;
+}
+
+.heroBadge {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #93c5fd;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 1px solid rgba(147, 197, 253, 0.2);
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.galeriaHero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.02em;
+}
+
+.galeriaHero p {
+  font-size: 1.2rem;
+  max-width: 650px;
+  margin: 0 auto;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* 1. VISION & MISSION */
+.visionMissionBg {
+  background: linear-gradient(to bottom, #f8fafc, #ffffff);
+}
+
+.sectionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.visionCard, .missionCard {
+  background-color: #ffffff;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.3s ease;
+}
+
+.visionCard:hover, .missionCard:hover {
+  transform: translateY(-4px);
+}
+
+.iconHeader {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.blueGlow { background-color: #dbeafe; color: #1e40af; }
+.marineGlow { background-color: #e0f2fe; color: #0284c7; }
+
+.visionCard h2, .missionCard h2 {
+  font-size: 1.75rem;
+  color: #0f172a;
+  margin: 0 0 16px 0;
+}
+
+.visionCard p, .missionCard p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #475569;
+  margin: 0;
+}
+
+/* 2. FIVE PRINCIPLES */
+.principlesGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.principleCard {
+  background-color: #ffffff;
+  border: 1px solid #f1f5f9;
+  padding: 30px 20px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.01);
+  transition: all 0.2s ease;
+}
+
+.principleCard:hover {
+  box-shadow: 0 12px 24px rgba(30, 64, 175, 0.05);
+  border-color: #bfdbfe;
+}
+
+.pIcon {
+  color: #1e40af;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.principleCard h3 {
+  font-size: 1.1rem;
+  color: #0f172a;
+  margin: 0 0 10px 0;
+}
+
+.principleCard p {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* 3. WORDS FROM THE PROPRIETOR */
+.proprietorAlign {
+  align-items: center;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 80px;
+}
+
+.proprietorImgArea {
+  position: relative;
+}
+
+.proprietorPhoto {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  display: block;
+  z-index: 5;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+}
+
+.imgDecorativeBorder {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #1e40af;
+  border-radius: 24px;
+  z-index: 1;
+  opacity: 0.3;
+}
+
+.subTitleText {
+  color: #1e40af;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.proprietorTextArea h2 {
+  font-size: 2.25rem;
+  color: #0f172a;
+  margin: 8px 0 0 0;
+}
+
+.proprietorTextArea blockquote {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #1e3a8a;
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+  font-weight: 500;
+  border-left: 4px solid #1e40af;
+  padding-left: 20px;
+}
+
+.proprietorParagraph {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #475569;
+  margin-bottom: 30px;
+}
+
+.proprietorSign h4 {
+  font-size: 1.1rem;
+  color: #0f172a;
+  margin: 0;
+}
+
+.proprietorSign h5 {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin: 4px 0 0 0;
+  font-weight: 400;
+}
+
+/* 4. GALLERY CAROUSEL */
+.darkBlueBg {
+  background: linear-gradient(135deg, #0f172a 0%, #111827 100%);
+}
+
+.lightText h2 { color: #ffffff; }
+.whiteLine { background-color: #ffffff; opacity: 0.3; }
+
+.carouselContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.carouselWindow {
+  flex: 1;
+  height: 480px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+}
+
+.carouselImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  animation: fadeTransition 0.6s ease-in-out;
+}
+
+@keyframes fadeTransition {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+.carouselCaption {
+  position: absolute;
+  bottom: 0;
+  inset-x: 0;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.9) 0%, transparent 100%);
+  padding: 30px;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.carouselBtn {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.carouselBtn:hover {
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+.carouselIndicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.indicatorDot {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.activeDot {
+  background-color: #1e40af;
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* 5. TIMELINE MECHANICS */
+.timelineWrapper {
+  position: relative;
+  max-width: 800px;
+  margin: 40px auto 0 auto;
+}
+
+.timelineCenterLine {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  background-color: #e2e8f0;
+  height: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+.timelineNode {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50%;
+  position: relative;
+  margin-bottom: 40px;
+  z-index: 5;
+}
+
+.timelineNode.rightNode {
+  justify-content: flex-start;
+  padding-right: 0;
+  padding-left: 50%;
+}
+
+.timelineContent {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 24px;
+  border-radius: 16px;
+  width: 85%;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.02);
+  margin-right: 30px;
+}
+
+.timelineNode.rightNode .timelineContent {
+  margin-right: 0;
+  margin-left: 30px;
+}
+
+.timelineBadge {
+  background-color: #eff6ff;
+  color: #1e40af;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.timelineContent h3 {
+  font-size: 1.2rem;
+  color: #0f172a;
+  margin: 0 0 8px 0;
+}
+
+.timelineContent p {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.timelinePoint {
+  position: absolute;
+  top: 28px;
+  right: -6px;
+  width: 12px;
+  height: 12px;
+  background-color: #1e40af;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 4px rgba(30, 64, 175, 0.1);
+  z-index: 10;
+}
+
+.timelineNode.rightNode .timelinePoint {
+  right: auto;
+  left: -6px;
+}
+
+/* 6. CORE ACTIVITIES (10 POINTS) */
+.activitiesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.activityCard {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.01);
+  transition: all 0.2s ease;
+}
+
+.activityCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(15, 23, 42, 0.05);
+  border-color: #bfdbfe;
+}
+
+.activityTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.activityIcon {
+  color: #1e40af;
+}
+
+.activityNumber {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #94a3b8;
+  background-color: #f1f5f9;
+  padding: 4px 10px;
+  border-radius: 10px;
+}
+
+.activityCard h3 {
+  font-size: 1.25rem;
+  color: #0f172a;
+  margin: 0 0 12px 0;
+}
+
+.activityCard p {
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* EMBEDDED FOOTER */
+.embeddedFooter {
+  background-color: #0f172a;
+  color: #64748b;
+  padding: 30px 24px;
+  text-align: center;
+  border-top: 1px solid #1e293b;
+}
+
+.footerInner p {
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* RESPONSIVIDADE INTERNACIONAIS */
+@media (max-width: 1000px) {
+  .principlesGrid { grid-template-columns: repeat(2, 1fr); }
+  .activitiesGrid { grid-template-columns: repeat(2, 1fr); }
+  .sectionGrid { grid-template-columns: 1fr; gap: 30px; }
+  .proprietorAlign { grid-template-columns: 1fr; gap: 40px; }
+  .galeriaHero h1 { font-size: 2.5rem; }
+}
+
+@media (max-width: 650px) {
+  .principlesGrid { grid-template-columns: 1fr; }
+  .activitiesGrid { grid-template-columns: 1fr; }
+  .timelineCenterLine { left: 16px; }
+  .timelineNode { justify-content: flex-start; padding-left: 45px; padding-right: 0; }
+  .timelineNode.rightNode { padding-left: 45px; }
+  .timelineContent { width: 100%; }
+  .timelineNode.rightNode .timelineContent { margin-left: 0; }
+  .timelinePoint { left: 10px !important; right: auto !important; }
+  .carouselWindow { height: 300px; }
+  .carouselBtn { display: none; }
+}
