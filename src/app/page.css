@@ -1,0 +1,606 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+.container {
+  color: #2d3748; /* Cinza escuro para leitura */
+  background-color: #ffffff; /* Fundo padrão Branco */
+}
+
+/* 2. HERO SECTION */
+.hero {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); /* Gradiente do Azul Marinho para o Azul Escuro */
+  color: #ffffff;
+  padding: 190px 20px;
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #93c5fd; /* Azul claro para o texto do destaque */
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 1px solid rgba(147, 197, 253, 0.3);
+  margin-bottom: 24px;
+}
+
+.heroTitle {
+  font-size: 2.75rem;
+  font-weight: 800;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+}
+
+.heroDescription {
+  font-size: 1.125rem;
+  color: #e2e8f0; /* Branco fosco */
+  line-height: 1.6;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ffffff; /* Botão Branco de Destaque */
+  color: #1e3a8a; /* Texto Azul Marinho */
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.btnPrimary:hover {
+  background-color: #f1f5f9;
+}
+
+.btnSecondary {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background 0.2s;
+}
+
+.btnSecondary:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 3. STATS / COUNTER */
+.statsSection {
+  max-width: 1100px;
+  margin: -100px auto 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.statsGrid {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid #e2e8f0;
+}
+
+.statCard {
+  padding: 30px;
+  text-align: center;
+}
+
+.statCard:not(:last-child) {
+  border-right: 1px solid #edf2f7;
+}
+
+.statIcon {
+  color: #1e40af; /* Ícones em Azul Real */
+  margin-bottom: 12px;
+}
+
+.statNumber {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin: 0;
+  color: #0f172a;
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 4px 0 0 0;
+}
+
+/* COMPONENTES GENÉRICOS DE SESSÃO */
+.sectionHeader {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+}
+
+.sectionHeader h2 {
+  font-size: 2rem;
+  color: #0f172a;
+  margin: 0;
+}
+
+.divider {
+  width: 60px;
+  height: 4px;
+  background-color: #1e40af; /* Linha divisória em Azul */
+  margin: 15px auto;
+  border-radius: 2px;
+}
+
+.sectionHeader p {
+  color: #64748b;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* 4. ACADEMIC PROGRAMS */
+.programsSection {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 0 20px;
+}
+
+.programsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.programCard {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 20px; /* Bordas ligeiramente mais arredondadas e modernas */
+  border: 1px solid #f1f5f9; /* Borda mais suave padrão Slate-100 */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.01);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); /* Transição ultra suave */
+  position: relative;
+  overflow: hidden;
+}
+
+.top-gear {
+  /* Efeito de linha brilhante no topo do card ao passar o mouse */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #1e40af, #3b82f6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.programCard:hover {
+  border-color: #e2e8f0;
+  box-shadow: 0 20px 25px -5px rgba(30, 64, 175, 0.08), 0 10px 10px -5px rgba(30, 64, 175, 0.03);
+  transform: translateY(-5px);
+}
+
+.programCard:hover::before {
+  opacity: 1;
+}
+
+.programCardIcon {
+  width: 52px;
+  height: 52px;
+  background-color: #eff6ff; /* Fundo azul suave */
+  color: #1e40af; 
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  transition: transform 0.3s ease;
+}
+
+.programCard:hover .programCardIcon {
+  transform: scale(1.1) rotate(3deg); /* Micro interações premium */
+  background-color: #1e40af;
+  color: #ffffff;
+}
+
+.programCard h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  color: #0f172a; /* Slate 900 */
+  letter-spacing: -0.02em;
+}
+
+.programCard p {
+  font-size: 0.925rem;
+  color: #475569; /* Slate 600 para leitura confortável */
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .programsGrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; /* Garante que os cards fiquem estritamente em uma Row */
+    
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* Rolagem elástica no iOS */
+    
+    /* Espaçamento inteligente: o padding-left alinha os cards com o layout, 
+       o padding-right maior dá espaço para o último card respirar ao fim da rolagem */
+    padding: 24px 24px 32px 20px; 
+    margin: 0 -20px; /* Expande o container até as bordas físicas da tela */
+    gap: 20px;
+    
+    scrollbar-width: none; /* Oculta barra no Firefox */
+  }
+  
+  .programsGrid::-webkit-scrollbar {
+    display: none; /* Oculta barra no Chrome/Safari */
+  }
+
+  .programCard {
+    flex: 0 0 290px; 
+    padding: 32px 24px;
+    box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.05); /* Sombra mais visível no mobile */
+    border-color: #e2e8f0;
+  }
+  
+  .top-gear {
+    opacity: 1; 
+    background: #cacaca;
+    height: 3px;
+    transition: all 0.4s ease;
+  }
+  .programCard:hover .top-gear{
+        background: #1e40af;
+
+  }
+
+  /* Faz as fotos da galeria também empilharem de forma organizada abaixo */
+  .galleryTopGrid, .galleryBottomGrid { 
+    grid-template-columns: 1fr; 
+    gap: 16px;
+  }
+}
+
+
+/* 5. GALLERY */
+.gallerySection {
+  background-color: #f8fafc; /* Fundo Branco Gelo / Cinza bem claro */
+  padding: 100px 20px;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.galleryTopGrid {
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.galleryBottomGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.galleryCardLarge, .galleryCardSmall {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #cbd5e1;
+}
+
+.galleryCardLarge { height: 280px; }
+.galleryCardSmall { height: 220px; }
+
+.galleryCardLarge img, .galleryCardSmall img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.galleryCardLarge:hover img, .galleryCardSmall:hover img {
+  transform: scale(1.04);
+}
+
+.galleryOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.8) 0%, transparent 100%); /* Overlay baseado em Azul Marinho Escuro */
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.galleryCardLarge:hover .galleryOverlay, .galleryCardSmall:hover .galleryOverlay {
+  opacity: 1;
+}
+
+.galleryOverlay span {
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* ABOUT SECTION */
+.aboutSection {
+  max-width: 1100px;
+  margin: 100px auto;
+  padding: 0 20px 60px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.aboutSubtitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1e40af;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.aboutLeft h2 {
+  font-size: 2rem;
+  margin: 10px 0 30px 0;
+  color: #0f172a;
+}
+
+.missionVisionStack {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.missionVisionStack h4 {
+  font-size: 1rem;
+  margin: 0 0 6px 0;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.missionVisionStack h4::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: #1e40af; /* Detalhe azul */
+  border-radius: 50%;
+}
+
+.missionVisionStack p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.aboutRightCard {
+  background-color: #eff6ff; /* Cartão lateral com fundo Azul suave */
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid #bfdbfe;
+}
+
+.aboutRightCard h3 {
+  margin: 0 0 16px 0;
+  color: #1e3a8a;
+}
+
+.aboutRightCard p {
+  font-size: 0.9rem;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+/* 6. REGISTRATION FORM */
+.enquirySection {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.formContainer {
+  background-color: #ffffff;
+  padding: 50px;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+}
+
+.formContainer h3 {
+  font-size: 1.75rem;
+  margin: 0;
+  color: #0f172a;
+}
+
+.formSubtitle {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin: 8px 0 32px 0;
+}
+
+.mainForm {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.mainForm label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  color: #475569;
+}
+
+.mainForm input, .mainForm select, .mainForm textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 14px 16px;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.mainForm input:focus, .mainForm select:focus, .mainForm textarea:focus {
+  border-color: #1e40af; /* Foco do input em Azul */
+  background-color: #ffffff;
+}
+
+.mainForm textarea {
+  resize: none;
+}
+
+.btnSubmit {
+  background-color: #1e40af; /* Botão de envio em Azul */
+  color: #ffffff;
+  border: none;
+  padding: 16px;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.btnSubmit:hover {
+  background-color: #1d4ed8;
+}
+
+/* 7. FOOTER */
+.footer {
+  background-color: #0f172a; /* Rodapé em Azul Escuro Escurecido (Slate/Navy) */
+  color: #94a3b8;
+  padding: 80px 20px 40px 20px;
+}
+
+.footerGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 60px;
+}
+
+.footerBrand {
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.footerGrid p {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.footerTitle {
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footerContactList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footerContactList p {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.footerBottom {
+  max-width: 1200px;
+  margin: 60px auto 0 auto;
+  padding-top: 30px;
+  border-top: 1px solid #1e293b;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #475569;
+}
+
+/* RESPONSIVIDADE (MOBILE) */
+@media (max-width: 900px) {
+.hero {
+  padding-top: 160px;
+  text-align: center;
+}
+  .navigation { display: none; }
+  .statsGrid { grid-template-columns: repeat(2, 1fr); margin-top: -20px; }
+  .statCard:nth-child(2) { border-right: none; }
+  .programsGrid { grid-template-columns: 1fr; }
+  .galleryTopGrid, .galleryBottomGrid { grid-template-columns: 1fr; }
+  .aboutGrid { grid-template-columns: 1fr; gap: 40px; }
+  .formRow { grid-template-columns: 1fr; }
+  .footerGrid { grid-template-columns: 1fr; gap: 40px; }
+  .aboutSection {
+  max-width: 1100px;
+  margin: 100px 15px;
+  padding: 0 10px 60px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+}
